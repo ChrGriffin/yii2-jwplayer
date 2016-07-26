@@ -1,0 +1,31 @@
+{
+    "name": "wadeshuler/yii2-jwplayer",
+    "description": "JWPlayer extension widget for the Yii2 Framework",
+    "keywords": [
+        "yii2",
+        "widget",
+        "extension",
+        "jwplayer",
+        "Longtail Video"
+    ],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/wadeshuler/yii2-jwplayer/issues?state=open",
+        "source": "https://github.com/wadeshuler/yii2-jwplayer"
+    },
+    "authors": [
+        {
+            "name": "Wade Shuler"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "wadeshuler\\jwplayer\\": ""
+        }
+    }
+}
