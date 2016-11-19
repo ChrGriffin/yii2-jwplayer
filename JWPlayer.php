@@ -91,7 +91,19 @@ class JWPlayer extends Widget
         foreach ($this->_requiredOptions as $key)
         {
             if ( ! ArrayHelper::keyExists($key, $this->_playerOptions, false) ) {
-                throw new InvalidConfigException("JWPlayer Widget: player options missing '$key'");
+                if ( $key == 'file' ) {
+                    if ( ! ArrayHelper::keyExists('sources', $this->_playerOptions, false ) ) {
+
+                        throw new InvalidConfigException("JWPlayer Widget: player options missing '$key'");
+                   
+                    } else if ( empty( $this->_playerOptions['sources'] ) ) {
+
+                        throw new InvalidConfigException("JWPlayer Widget: sources cannot be empty");
+                    }
+                } else {
+
+                    throw new InvalidConfigException("JWPlayer Widget: player options missing '$key'");
+                }
             }
         }
     }
